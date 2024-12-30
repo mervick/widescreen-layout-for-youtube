@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "WideScreen Layout for YouTube",
+  "version": "1.0.0",
+  "description": "Extension enhances the YouTube user interface for large screens and widescreen monitors",
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["background/content.js"],
+      "css": ["background/style.css"]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+/* wide screen */
+@media (min-width: 1800px) {
+  ytd-watch-flexy[flexy][is-two-columns_]:not([full-bleed-player]) #columns.ytd-watch-flexy {
+    min-width: calc(100vw - var(--ytd-margin-6x) * 2)!important;
+    --ytwd-ratio: calc(var(--ytd-watch-flexy-height-ratio) / var(--ytd-watch-flexy-width-ratio));
+    --ytwd-player-offset: calc(var(--ytd-toolbar-offset) + var(--ytd-margin-6x));
+    --ytwd-min-player-outer: calc(var(--ytwd-player-offset) + var(--ytd-watch-flexy-space-below-player));
+    --ytwd-max-player-height: calc(100vh - var(--ytwd-min-player-outer));
+    --ytwd-video-width: calc(100vw - var(--ytd-watch-flexy-sidebar-width) - var(--ytd-margin-6x) * 5);
+    --ytwd-video-height: calc(var(--ytwd-video-width) * var(--ytwd-ratio));
+
+    --ytwd-player-height: calc(min(var(--ytwd-video-height), var(--ytwd-max-player-height)));
+    --ytwd-player-width: calc(var(--ytwd-player-height) / var(--ytwd-ratio));
+
+    --ytwd-orig-height: var(--ytd-comments-engagement-panel-content-height);
+    --ytwd-orig-width: var(--ytd-watch-flexy-max-player-width-wide-screen);
+
+    --ytd-watch-flexy-min-player-height: var(--ytwd-player-height);
+    --ytd-watch-flexy-min-player-width: var(--ytwd-player-width);
+
+    --ytwd-offset-top: calc(var(--ytwd-player-height)/2 - var(--ytwd-orig-height)/2);
+    --ytwd-offset-left: calc(var(--ytwd-player-width)/2 - var(--ytwd-orig-width)/2);
+
+    --ytwd-scale: calc((var(--ytwd-player-width) * 1) / (var(--ytwd-orig-width) * 1));
+
+    --ytd-watch-flexy-panel-max-height: var(--ytwd-player-height);
+    --ytd-watch-flexy-chat-max-height: var(--ytwd-player-height);
+    --ytd-watch-flexy-structured-description-max-height: var(--ytwd-player-height);
+    --ytd-watch-flexy-comments-panel-max-height: var(--ytwd-player-height);
+  }
+}
+
+@media (min-width: 1800px) {
+  ytd-watch-flexy[flexy][is-two-columns_]:not([full-bleed-player]) #columns.ytd-watch-flexy #player {
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1800px) {
+  ytd-watch-flexy[flexy][is-two-columns_]:not([full-bleed-player]) #columns.ytd-watch-flexy video.video-stream.html5-main-video {
+    width: var(--ytwd-player-width)!important;
+    height: var(--ytwd-player-height)!important;
+  }
+}
+
+@media (min-width: 1800px) {
+  ytd-watch-flexy[flexy][is-two-columns_]:not([full-bleed-player]) #columns.ytd-watch-flexy .ytp-storyboard-framepreview {
+    width: var(--ytwd-player-width) !important;
+    height: var(--ytwd-player-height) !important;
+  }
+}
+
+@media (min-width: 1800px) {
+  ytd-watch-flexy[flexy][is-two-columns_]:not([full-bleed-player]) #columns.ytd-watch-flexy .ytp-storyboard-framepreview-img {
+    margin-top: var(--ytwd-offset-top) !important;
+    transform: scale(var(--ytwd-scale)) !important;
+  }
+}
+
+@media (min-width: 1800px) {
+  ytd-watch-flexy[flexy][is-two-columns_]:not([full-bleed-player]) #columns.ytd-watch-flexy .ytp-tooltip.ytp-bottom.ytp-rounded-tooltip.ytp-preview {
+    margin-top: calc(var(--ytwd-offset-top) * 2 - 14px) !important;
+  }
+}
+
+@media (min-width: 1800px) {
+  ytd-watch-flexy[flexy][is-two-columns_]:not([full-bleed-player]) #columns.ytd-watch-flexy .ytp-tooltip.ytp-bottom.ytp-rounded-tooltip {
+    margin-top: calc(var(--ytwd-offset-top) * 2 - 10px) !important;
+  }
+}
+
+/* playlist height */
+
+ytd-watch-flexy[default-layout]:not([no-top-margin]):not([reduced-top-margin]) #secondary.ytd-watch-flexy #playlist {
+  min-height: 100vh;
+  min-height: calc(100vh  - 100px);
+}
+
+ytd-playlist-panel-renderer[modern-panels]:not([within-miniplayer]) #container.ytd-playlist-panel-renderer {
+  min-height: 100vh;
+  min-height: calc(100vh - 100px);
+}
+
+/* progressbar width */
+
+.ytp-progress-bar-padding {
+  height: 20px;
+}
+.ytp-progress-bar-container {
+  height: 20px !important;
+}
+.ytp-progress-bar {
+  height: 20px !important;
+}
+
+.ytp-scrubber-button {
+  margin-top: 7px;
+  opacity: 0;
+}
+
+.ytp-progress-bar {
+  opacity: 0.3;
+  transition: opacity 0.4s ease;
+}
+.ytp-progress-bar:hover {
+  opacity: 0.9;
+}
+
+.ytp-ce-element {
+  display: none!important;
+}
