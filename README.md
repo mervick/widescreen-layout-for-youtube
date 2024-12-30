@@ -1,4 +1,5 @@
 # WideScreen Layout for YouTube
+_(Chrome extension)_
 
 This extension enhances the YouTube user interface for large screens and widescreen monitors.
 
