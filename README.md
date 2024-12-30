@@ -9,4 +9,4 @@ This extension enhances the YouTube user interface for large screens and widescr
 * Increases the playlist height for a more convenient viewing experience.
 * Makes the progress bar thicker, making it easier to interact with on larger screens.
 
-Perfect for those who want to enjoy watching videos on large and widescreen displays while maintaining the standard YouTube layout.
+Perfect for those who want to enjoy watching videos on large and widescreen displays while maintaining the default YouTube layout.
