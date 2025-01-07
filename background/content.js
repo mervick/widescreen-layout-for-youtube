@@ -22,6 +22,10 @@ const updatePage = () => {
   setTimeout(callResizeEvent, 1000);
 };
 
+window.addEventListener("focus", function(event) {
+  updatePage();
+}, false);
+
 observeChange();
 updatePage();
 setTimeout(callResizeEvent, 200);
